@@ -1,6 +1,6 @@
 package com.codegym;
 
-public class Square extends Rectangle implements Resizeable {
+public class Square extends Rectangle implements Resizeable, Colorable {
 
     public Square() {
     }
@@ -38,6 +38,11 @@ public class Square extends Rectangle implements Resizeable {
     public void resize(double percent) {
         double newSide = getSide() + getSide() * percent / 100;
         setSide(newSide);
+    }
+
+    @Override
+    public void howToColor() {
+        System.out.println("Color all four sides.");
     }
 
     @Override
